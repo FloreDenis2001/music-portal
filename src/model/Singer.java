@@ -27,11 +27,12 @@ public class Singer implements Comparable<Singer> {
         this.singer_music_id = Integer.parseInt(path[1]);
         this.singer_name = path[2];
         this.singer_mobile = path[3];
-        this.singer_email= path[4];
+        this.singer_email = path[4];
         this.singer_username = path[5];
         this.singer_password = path[6];
         this.singer_address = path[7];
     }
+
     public int getSinger_id() {
         return singer_id;
     }
@@ -96,13 +97,18 @@ public class Singer implements Comparable<Singer> {
         this.singer_address = singer_address;
     }
 
+    public String toSave() {
+        String text = this.getSinger_id() + "," + this.getSinger_music_id() + "," + this.getSinger_name() + "," + this.getSinger_mobile() + "," + this.getSinger_email() + "," + this.getSinger_username() + "," + this.getSinger_password() + "," + this.getSinger_address();
+        return text;
+    }
+
     @Override
     public String toString() {
         String text = "Name : " + this.singer_name + "\n";
         text += "Mobile : " + this.singer_mobile + "\n";
         text += "Email : " + this.singer_email + "\n";
         text += "Username : " + this.singer_username + "\n";
-        text += "Address : " + this.singer_username + "\n";
+        text += "Address : " + this.singer_address + "\n";
         return text;
     }
 

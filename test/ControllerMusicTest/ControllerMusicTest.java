@@ -18,9 +18,9 @@ class ControllerMusicTest {
     @Test
     public void adaugareTest() {
         ControllerMusic controllerMusic = new ControllerMusic();
-        Music x = new Music(controllerMusic.nextId(), 4, "Black", "Rock", "des");
+        Music x = new Music(controllerMusic.nextId(),4,"Rock", "des");
         controllerMusic.adaugare(x);
-        assertEquals("Black", x.getMusic_name());
+        assertEquals("Rock", controllerMusic.findById(7).getMusic_type());
 
     }
 
@@ -44,18 +44,6 @@ class ControllerMusicTest {
         assertEquals(null, controllerMusic.findById(10));
     }
 
-    @Test
-    public void findByName() {
-        ControllerMusic controllerMusic = new ControllerMusic();
-        Music x = controllerMusic.findByName("Pursuance");
-        assertEquals(5, x.getMusic_album_id());
-    }
-
-    @Test
-    public void findByName2() {
-        ControllerMusic controllerMusic = new ControllerMusic();
-        assertEquals(null, controllerMusic.findByName("nouaMuzica"));
-    }
 
     @Test
     public void stergereTest() {

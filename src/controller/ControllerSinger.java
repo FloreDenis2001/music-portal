@@ -1,7 +1,7 @@
 package controller;
 
 import model.Music;
-import model.Track;
+import model.Singer;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -9,21 +9,22 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class ControllerTrack {
-    private ArrayList<Track> tracks;
+public class ControllerSinger {
+    private ArrayList<Singer> singers;
 
-    public ControllerTrack(){
-        tracks=new ArrayList<>();
+    public ControllerSinger(){
+        singers=new ArrayList<>();
         this.load();
     }
+
     public void load() {
         try {
-            File file = new File("C:\\Users\\flore\\Desktop\\mycode\\music-portal\\src\\res\\track.txt");
+            File file = new File("C:\\Users\\flore\\Desktop\\mycode\\music-portal\\src\\res\\singer.txt");
             Scanner scanner = new Scanner(file);
             while (scanner.hasNextLine()) {
                 String text = scanner.nextLine();
-                Track x = new Track(text);
-                this.tracks.add(x);
+                Singer x = new Singer(text);
+                this.singers.add(x);
             }
 
         } catch (Exception e) {
@@ -32,37 +33,37 @@ public class ControllerTrack {
     }
 
     public void afisare() {
-        for (Track x : tracks)
+        for (Singer x : singers)
             System.out.println(x);
     }
 
 
-    public void adaugare(Track trackNou) {
-        Track x = findById(trackNou.getTrack_id());
+    public void adaugare(Singer singerNou) {
+       Singer x = findById(singerNou.getSinger_id());
         if (x == null) {
-            this.tracks.add(trackNou);
+            this.singers.add(singerNou);
         }
     }
 
 
     public void stergere(int id) {
-        Track c = findById(id);
+        Singer c = findById(id);
         if (c != null) {
-            this.tracks.remove(c);
+            this.singers.remove(c);
         }
     }
 
 
-    public void update(int id, String descriereNoua) {
-        Track x = findById(id);
+    public void update(int id, String parolaNoua) {
+        Singer x = findById(id);
         if (x != null) {
-            x.setTrack_description(descriereNoua);
+            x.setSinger_password(parolaNoua);
         }
     }
 
-    public Track findById(int id) {
-        for (Track x : tracks) {
-            if (x.getTrack_id() == id) {
+    public Singer findById(int id) {
+        for (Singer x : singers) {
+            if (x.getSinger_id() == id) {
                 return x;
             }
         }
@@ -71,16 +72,16 @@ public class ControllerTrack {
 
 
     public int nextId() {
-        if (this.tracks.size() >= 0) {
-            return this.tracks.get(this.tracks.size() - 1).getTrack_id() + 1;
+        if (this.singers.size() >= 0) {
+            return this.singers.get(this.singers.size() - 1).getSinger_id() + 1;
         }
         return 1;
     }
 
 
-    public String toSaveTrack() {
+    public String toSaveSinger() {
         String text = "";
-        for (Track x : tracks) {
+        for (Singer x : singers) {
             text += x.toSave() + "\n";
         }
         return text;
@@ -88,10 +89,10 @@ public class ControllerTrack {
 
     public void save() {
         try {
-            File file = new File("C:\\Users\\flore\\Desktop\\mycode\\music-portal\\src\\res\\track.txt");
+            File file = new File("C:\\Users\\flore\\Desktop\\mycode\\music-portal\\src\\res\\singer.txt");
             FileWriter fileWriter = new FileWriter(file);
             PrintWriter printWriter = new PrintWriter(fileWriter);
-            printWriter.print(toSaveTrack());
+            printWriter.print(toSaveSinger());
             printWriter.close();
         } catch (Exception e) {
             e.printStackTrace();

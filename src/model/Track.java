@@ -65,6 +65,11 @@ public class Track implements Comparable<Track> {
         this.track_description = track_description;
     }
 
+    public String toSave() {
+        String text = this.getTrack_id() + "," + this.getTrack_music_id() + "," + this.getTrack_name() + "," + this.getTrack_type() + "," + this.getTrack_description();
+        return text;
+    }
+
     @Override
     public String toString() {
         String text = "Name : " + this.track_name + "\n";

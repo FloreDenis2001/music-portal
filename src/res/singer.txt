@@ -1,8 +1,5 @@
 1,6,John Coltrane,687-431-6806,awallerbridge0@networkadvertising.org,cbagguley0,wFBNWn3rKKd,2165 Old Shore Drive
 2,4,Neil Young,479-882-3374,lmucci1@cloudflare.com,cpinel1,LEMqPV,4512 Upham Plaza
 3,2,Joni Mitchell,941-672-4369,mdoudney2@taobao.com,msurgison2,PMpFXbCWf,15254 Becker Center
-4,1,Neil Young,271-170-3470,mishchenko3@diigo.com,mpeggram3,esUkH6jDdAy6,93709 Wayridge Center
-5,1,Neil Young,124-446-6603,trainy4@bbb.org,alenglet4,XlC9D27DrjT,5053 Dawn Junction
-6,5,The Beatles,177-341-2865,nstribling5@mapquest.com,asergent5,nUOJkoIcvCa,308 Claremont Avenue
-7,3,The Beatles,673-978-8245,droblin6@nydailynews.com,gangrick6,nnPOeKZxOI,7940 Novick Circle
-8,2,Joni Mitchell,985-632-8570,mkerner7@cnn.com,ipunchard7,6lJNoIu6H,08 Victoria Parkway
+4,3,The Beatles,673-978-8245,droblin6@nydailynews.com,gangrick6,nnPOeKZxOI,7940 Novick Circle
+5,5,The Beatles,177-341-2865,nstribling5@mapquest.com,asergent5,nUOJkoIcvCa,308 Claremont Avenue

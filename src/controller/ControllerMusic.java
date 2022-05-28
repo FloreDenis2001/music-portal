@@ -69,14 +69,6 @@ public class ControllerMusic {
         return null;
     }
 
-    public Music findByName(String musicName) {
-        for (Music x : music) {
-            if (x.getMusic_name().equals(musicName)) {
-                return x;
-            }
-        }
-        return null;
-    }
 
     public int nextId() {
         if (this.music.size() >= 0) {
@@ -96,7 +88,7 @@ public class ControllerMusic {
 
     public void save() {
         try {
-            File file = new File("C:\\Users\\flore\\Desktop\\mycode\\music-portal\\src\\res\\album.txt");
+            File file = new File("C:\\Users\\flore\\Desktop\\mycode\\music-portal\\src\\res\\music.txt");
             FileWriter fileWriter = new FileWriter(file);
             PrintWriter printWriter = new PrintWriter(fileWriter);
             printWriter.print(toSaveMusic());
