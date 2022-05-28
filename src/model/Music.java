@@ -64,9 +64,14 @@ public class Music implements Comparable<Music> {
         this.music_description = music_description;
     }
 
+    public String toSave() {
+        String text = this.getMusic_id() + "," + this.getMusic_album_id() + "," + this.getMusic_name() + "," + this.getMusic_type() + "," + this.getMusic_description();
+        return text;
+    }
+
     @Override
     public String toString() {
-        String text = "Music Name : " + this.music_album_id + "\n";
+        String text = "Music Name : " + this.music_name + "\n";
         text += "Type : " + this.music_type + "\n";
         text += "Description : " + this.music_description + "\n";
         return text;
