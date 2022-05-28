@@ -1,0 +1,5 @@
+1,After the Gold Rush,rock,description1
+2,Revolver,rock,description2
+3,The White Album,rock,description3
+4,Blue,folck,description4
+5,A Love Supreme,jazz,description5numbers
